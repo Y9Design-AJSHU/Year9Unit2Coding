@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--- Here are the links to all the css and js documents that are used to style and add interaction to the site. --->
+		<link rel="stylesheet" href="css/navbar.css">
+		<link rel="stylesheet" href="css/connectiongrid.css">
+		<link rel="stylesheet" href="https://ourworldindata.org/assets/css/commons.css">
+		<script src="navbar.js"></script>
+		<!-- Here is where the font is imported --->
+		<link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="img/connectionimg.png" />
+		<!--- Here is the title of the page --->
+		<title>Connection between the SDGs</title>
+		<style>b{font-family:Assistant;}</style>
+	</head>
+	<body class="ChartPage" data-gr-c-s-loaded="true">
+		<!--- Here is the div container that contains the navigation bar --->
+		<div id="navbar">
+			<a href="index.html">Home</a>
+			<a href="sdg4.html">SDG #4</a>
+			<a href="sdg5.html">SDG #5</a>
+			<a id="active" href="javascript:void(0)">Connection Between SDG #4 and SDG #5</a>
+		</div>
+		<!--- Here is the div container that contains the header section --->
+		<div class="header">
+			<h1 style="font-size:70px;">Connection between SDG#4 and SDG#5</h1>
+			<p style="font-size:45px;">How are they connected?</p>
+		</div>
+		<!-- Below, the div containing all elements within the grid is created-->
+		<div class="grid-container">
+			<!-- Below are all the grid areas-->
+			<!-- Here are the logos for the SDG and the target --->			
+			<div class="logoI" id="nopad"><img src="img/target45.png" width=65%></div>
+			<div class="logoII" id="nopad"><img src="img/connectionimg.png" width=47%></div>
+			<!--- Below is a lot of the text that is used in the site (the overview and target)  --->
+			<div class="target"><p style="font-size:30px"><em><strong>Target 4.5</em></strong> - By 2030, eliminate gender disparities in education and ensure equal access to all levels of education and vocational training for the vulnerable, including persons with disabilities, indigenous peoples and children in vulnerable situations</p></div>
+			<div class="overview"><p style="font-size:25px;"><strong>Overview</strong> - Target 4.5 looks at how equal all people are when it comes to access to education at all levels. This includes equality in many forms (such as female/male, rural/urban, bottom/top wealth quintile and others such as disability status, indigenous peoples and conflict-affected), but has a large focus on equality between male and female students. This is extremely important because educating girls would cause a chain reaction that benefits many other aspects of life. Unfortunately, in many areas of the world girls are significantly unequal when it comes to access to education. 
+			Educating girls will have many positive effects. These include: a decrease in infant and maternal mortality; more female doctors and nurses that can aid with the medical care of infants and mothers; educated women are inherently more likely to send her children to school causing a positive snowball effect; fewer child marriages; a decrease in unwanted exponential population growth; a decrease violence against womenl; and an increased female political involvement, which often results in less support for military and terroristic violence by the government.</p></div>
+			<!--- Here is the image that goes next to the overview --->
+			<div class="imgov" id="nopadding"><img src="img/girlsschool.png" style="width: 100%; height: 580px; object-fit: cover; padding:0px;margin:0px;"></div>
+			<!--- Here is the YouTube video --->
+			<div class="video"><iframe width=100% height="475px" src="https://www.youtube-nocookie.com/embed/nIkdvtb8nJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+			<!--- Here is where the Chart.JS graph goes (the canvas). Below the canvas is a button which is what is clicked to sort the data. There is also the "What is GPI" hover tooltip that helps the user understand what GPI is.--->		
+			<div class="graph"><canvas id="chart"></canvas><button id="shuffle" style="background-color: rgba(166,29,42); border: none; color: white;padding: 10px 30px;text-align: center;text-decoration: none;font-size: 15px;margin: 4px 2px;cursor: pointer;">Sort Data In Ascending Order</button></canvas><br><div class="tooltip"><p style="font-size: 10;">What is GPI?</p><span class="tooltiptext"><p style="font-size: 10;">Ratio of the female primary completion rate to the male primary completion rate. It
+						is calculated by dividing the female value for the indicator by the male value for the
+						indicator. A GPI equal to 1 indicates parity between females and males. In general,
+						a value less than 1 indicates disparity in favor of males and a value greater than 1
+						indicates disparity in favor of females.</p></span></div></div>
+			<!--- Here is the embeded map --->
+			<div class="map"><iframe src="https://ourworldindata.org/grapher/net-enrolment-rate-primary-gender-parity-index-gpi" style="width: 100%; height: 600px; border: 0px none;"></iframe></div>
+			<!--- Below are all the charities, their images, and their overviews --->
+			<div class="chartitl"><p style="font-size:35px">&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash; Charities &mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;</p></div>
+			<div class="charI"><a href="https://malala.org/" ><p style="font-size:25px">The Malala Fund</p></a><a href="https://malala.org/"><img src="img/malalaimg.png" width=50% style="padding:20px"></a><p style="font-size:20px">The Malala Fund is an organization that aims to promote and fight for girls' right to education. The Malala Fund was started by Malala Yousafza, an activist for equal education who was shot when trying to attend school in Afghanistan. She received the Nobel Peace Prize in 2014 for her efforts. The Malala Fund operates in 5 countries, Afghanistan, Brazil, India, Nigeria, Pakistan, and the Syria Region. There, they work with local organizations such as Teach for Afghanistan, a teacher recruitment and training organization that aims to increase the number of women teachers in Afghanistan public schools, to achieve various goals that relate to girls' education. While their initiatives branch anywhere from building schools to training teachers, they have a focus on areas where oppressive governments or violent terrorist organizations pose a threat to girls who try to get an education. </p></div>
+			<div class="charII"><a href="https://plan-international.org/"><p style="font-size:25px">Plan International</p></a><a href="https://plan-international.org/"><img src="img/planint.png" width=35% style="padding:20px"></a><p style="font-size:20px">Plan International is committed to making a lasting impact on the lives of the most vulnerable and excluded children while promoting greater equality for girls. We aim not only to improve the daily lives of girls but also to advance their position and value in society, whilst actively working with boys and young men to champion gender equality. We believe in advancing children’s rights in all contexts, including during conflict and emergencies, where girls are faced with additional dangers. Our programmes deliver lasting change against discriminatory norms, policies and laws. We listen to the voices of children in the community, especially girls whose views and needs are frequently overlooked, to ensure that our work is relevant and effective.</p></div>
+			<!--- Below are all the news articles and their overviews --->
+			<div class="newstitl"><p style="font-size:35px">&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash; News &mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;</p></div>
+			<div class="newsI"><a href="https://theconversation.com/girls-are-being-denied-access-to-certain-sports-in-pe-simply-because-of-their-gender-106471"><p style="font-size:25px">Girls are being denied access to certain sports in PE simply because of their gender</p></a><br><p style="font-size:20px">Girls in the UK are often told that they can do whatever they want. That nothing can stop them. If they can dream it, they can achieve it. And yet, when it comes to accessing and becoming proficient in sports and activities in PE lessons, they are being stopped before they can even begin.</p></div>
+			<div class="newsII"><a href="https://theconversation.com/girls-thrive-with-women-teachers-a-study-in-francophone-africa-95297"><p style="font-size:25px">Girls thrive with women teachers: a study in Francophone Africa</p></a><br><p style="font-size:20px">Over the past few decades most advanced countries have witnessed two striking reversals of the gender gap. First, teaching has become a profession dominated by women. This is particularly true at primary school level, where 84.5% of teachers across all countries classified as “developed” by UNESCO are women.</p></div>
+			<div class="newsIII"><a href="https://www.un.org/sustainabledevelopment/blog/2018/12/sdg-advocate-her-highness-sheikha-moza-bint-nasser-met-with-antonio-guterres-and-henrietta-fore-at-hamad-bin-khalifa-university-to-discuss-progress-on-sdg-4/"><p style="font-size:25px">Jobs and paid-for schooling can keep Tanzanian girls from early marriages</p></a><br><p style="font-size:20px">Creating more opportunities for young women and girls to work and earn money is a possible solution to early marriages. Subsidising secondary education to keep poorer girls in school is another.</p></div>
+		</div>
+		<script>
+		//Below is the JavaScript code that allows for the Chart.JS graph to work.
+		//Here, the canvas with the id, chart is identified to hold the Chart.JS chart
+		const CHART = document.getElementById("chart");
+		//This controls how long the animations take (i.e. setup animation, sorting animation)
+		Chart.defaults.global.animation.duration = 3000;
+		// Here is where Chart.JS is setup
+		Chart.plugins.register({
+			beforeUpdate: function(chart) {
+				if (chart.options.sort) {
+					let dataArray = chart.data.datasets[0].data.slice();
+					let dataIndexes = dataArray.map((d, i) => i);
+					dataIndexes.sort((a, b) => {
+						return dataArray[a] - dataArray[b];
+					});
+
+					// sort data array as well
+					dataArray.sort((a, b) => a - b);
+
+					// At this point dataIndexes is sorted by value of the data, so we know how the indexes map to each other
+					let meta = chart.getDatasetMeta(0);
+					let newMeta = [];
+					let labels = chart.data.labels;
+					let newLabels = [];
+
+					meta.data.forEach((a, i) => {
+						newMeta[dataIndexes[i]] = a;
+						newLabels[dataIndexes[i]] = chart.data.labels[i];
+					});
+
+					meta.data = newMeta;
+					chart.data.datasets[0].data = dataArray;
+					chart.data.labels = newLabels;
+				}
+			}
+		});
+		//Here is where all the data and colours for all the bars are put. All the data was directly copied from a CSV from Our World in Data
+		let barChart = new Chart(CHART, {
+			type: 'horizontalBar',
+			data: {
+				labels: ["Antigua and Barbuda","Austria","Belarus","Benin","Bhutan","Burundi","Cape Verde","Chile","Colombia","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Denmark","Dominican Republic","El Salvador","Ethiopia","Gambia","Georgia","Germany","Guatemala","Guinea","Hong Kong","Hungary","Indonesia","Israel","Kazakhstan","Kenya","Laos","Latvia","Lesotho","Liberia","Liechtenstein","Lithuania","Madagascar","Malawi","Mali","Malta","Mauritania","Mauritius","Mexico","Mongolia","Morocco","Mozambique","Nauru","Nepal","Niger","Norway","Oman","Pakistan","Palau","Palestine","Peru","Russia","Saint Kitts and Nevis","Saint Vincent and the Grenadines","Samoa","Sao Tome and Principe","Saudi Arabia","Senegal","Seychelles","Slovakia","Slovenia","Solomon Islands","South Asia","Spain","Sri Lanka","Sweden","Switzerland","Thailand","Timor","Tunisia","Tuvalu","Ukraine","Vietnam"],
+				datasets: [{
+					label: "Gender Parity Index",
+					backgroundColor: [
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)'
+					],
+
+					data: [0.829,1.001,1.001,0.852,1.124,1.119,0.968,0.999,0.986,0.994,0.795,0.994,1.045,1.006,0.990,1.008,0.986,1.050,1.008,0.995,0.972,0.821,0.988,0.993,0.948,1.010,0.999,1.012,0.975,1.015,1.275,0.851,0.845,0.991,1.060,1.020,0.893,0.957,1.037,1.022,1.007,0.971,0.984,0.882,0.758,1.103,0.792,1.013,0.983,0.838,0.968,0.962,1.015,1.010,1.105,0.967,0.954,1.081,0.959,1.134,0.931,1.003,1.003,1.009,1.025,1.004,0.978,0.997,1.017,0.985,1.031,1.012,1.102,1.020,1.038]
+				}]
+			},
+			//Here is where the graph can be customized and all the titles and tooltip info is put
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				scaleShowValues: true,
+				defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'Assistant'",
+				title: {
+					display: true,
+					text: 'Primary completion rate, gender parity index (GPI)',
+					fontSize: 20,
+					fontColor: 'black',
+				},
+				legend: {
+					display: false,
+				},
+				scales: {
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Countries',
+							fontSize: 15,
+							fontColor: 'black',
+						},
+
+					}],
+					xAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Gender Parity Index',
+							fontSize: 15,
+							fontColor: 'black',
+						},
+						ticks: {
+							autoSkip: false,
+							beginAtZero: true,
+							callback: function(value, index, values) {
+								return value + " GPI";
+							}
+						}
+					}],
+				}
+			}
+		});
+		//Below is the function that sorts the data when the button is clicked
+		document.getElementById('shuffle').addEventListener('click', function() {
+			barChart.options.sort = true;
+			barChart.update();
+			barChart.options.sort = false;
+		});
+		</script>
+		<!--- Below is all of the FireBase code --->
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="/__/firebase/7.12.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="/__/firebase/7.12.0/firebase-analytics.js"></script>
+
+		<!-- Initialize Firebase -->
+		<script src="/__/firebase/init.js"></script>
+	</body>
+</html>
+

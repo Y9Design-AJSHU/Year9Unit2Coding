@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--- Here are the links to all the css and js documents that are used to style and add interaction to the site. --->
+		<link rel="stylesheet" href="css/navbar.css">
+		<link rel="stylesheet" href="css/gridhome.css">
+		<script src="navbar.js"></script>
+		<!-- Here is where the font is imported --->
+		<link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" type="image/x-icon" href="img/homelogo.png" />
+		<!--- Here is the title of the page --->
+		<title>Home</title>
+	</head>
+	<body>
+		<!--- Here is the div container that contains the navigation bar --->
+		<div id="navbar">
+			<a id="active" href="javascript:void(0)">Home</a>
+			<a href="sdg4.html">SDG #4</a>
+			<a href="sdg5.html">SDG #5</a>
+			<a href="connection.html">Connection Between SDG #4 and SDG #5</a>
+		</div>
+		<!--- Here is the div container that contains the header section --->
+		<div class="header">
+			<h1 style="font-size:70px;">Home</h1>
+			<p style="font-size:45px;">What are the SDGs and what are they used for?</p>
+		</div>
+		<!-- Below, the div the whole grid structure and all the elements within is created -->
+		<div class="grid-container">
+			<!-- All the grid areas are below and all the elements within them -->
+
+			<div class="allsdgs" id="nopadding"><img src="img/allsdgs.png" height=350></div>
+
+			<!--- Here is where the first grid section is, overview. --->
+			<div class="overview" style="font-size: 30px;">The Sustainable Development Goals are a call for action by all countries – poor, rich and middle-income – to promote prosperity while protecting the planet. They recognize that ending poverty must go hand-in-hand with strategies that build economic growth and address a range of social needs including education, health, social protection, and job opportunities, while tackling climate change and environmental protection. The 2030 Agenda for Sustainable Development, adopted by all United Nations Member States in 2015, provides a shared blueprint for peace and prosperity for people and the planet, now and into the future.
+			</div>
+			<!--- Below is the YouTube video embeded --->
+			<div class="video"><iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/RpqVmvMCmp0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+			<!--- Here is the image slideshow --->
+			<div class="imgslide"><div class="w3-content w3-section" style="max-width:500px">
+				<img class="mySlides" src="sdgs/sdg1.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg2.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg3.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg4.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg5.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg6.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg7.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg8.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg9.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg10.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg11.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg12.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg13.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg14.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg15.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg16.png" style="width:100%">
+				<img class="mySlides" src="sdgs/sdg17.png" style="width:100%">	
+				</div>
+		
+		</div>
+		<script>
+		//Below is the JavaScript code that allows for the image sldieshow to work.
+		var imgnum = 0;
+		sldshw();
+		//this function controls the slideshow
+		function sldshw() {
+			var i;
+			var a = document.getElementsByClassName("mySlides");
+			for (i = 0; i < a.length; i++) {
+				a[i].style.display = "none";  
+			}
+			imgnum++;
+			if (imgnum > a.length) {imgnum = 1}    
+			a[imgnum-1].style.display = "block";  
+			setTimeout(sldshw, 1000); // Change image every 2 seconds
+		}
+		</script>
+		<!--- Below is all of the FireBase code --->
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="/__/firebase/7.12.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="/__/firebase/7.12.0/firebase-analytics.js"></script>
+
+		<!-- Initialize Firebase -->
+		<script src="/__/firebase/init.js"></script>
+	</body>
+</html>

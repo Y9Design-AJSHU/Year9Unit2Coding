@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--- Here are the links to all the css and js documents that are used to style and add interaction to the site. --->
+
+		<link rel="stylesheet" href="css/navbar.css">
+		<link rel="stylesheet" href="css/grid5.css">
+		<link rel="shortcut icon" type="image/x-icon" href="sdgs/sdg5.png"/>
+		<script src="navbar.js"></script>
+		<!-- Here is where the font is imported --->
+		<link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+		<!--- Here is the title of the page --->
+		<title>SDG #5</title>
+	</head>
+	<body>
+		<!--- Here is the div container that contains the navigation bar --->
+		<div id="navbar">
+			<a href="index.html">First Page</a>
+			<a href="sdg4.html">SDG #4</a>
+			<a id="active" href="javascript:void(0)">SDG #5</a>
+			<a href="connection.html">Connection Between SDG #4 and SDG #5</a>
+		</div>
+		<!--- Here is the div container that contains the header section --->
+		<div class="header">
+			<h1 style="font-size:70px;">Sustainable Development Goal 5</h1>
+			<p style="font-size:45px;">Achieve gender equality and empower all women and girls.</p>
+		</div>
+		<!-- Below, the div containing all elements within the grid is created-->
+		<div class="grid-container">
+			<!-- Below are all the grid areas-->
+			<!-- Here are the logos for the SDG and the target --->
+			<div class="logoI" id="nopad"><img src="img/goal52.png" width=53%></div>
+			<div class="logoII" id="nopad"><img src="img/sdg5.png" width=40%></div>
+			<!--- Below is a lot of the text that is used in the site (i.e. Overview, target, etc.) --->
+			<div class="target"><p style="font-size:30px"><em><strong>Target 5.2</em></strong> - Eliminate all forms of violence against all women and girls in the public and private spheres, including trafficking and sexual and other types of exploitation</p></div>
+			<div class="overview"><p style="font-size:30px"><strong>Overview</strong> - Equal rights across gender is a basic human right, and ending gender-basd discrimination is essential for a sustainable future. Equal treatment and empowerment for women has been proven to cause economic and social growth globally.Through many different initiatives, the UNDP has achieved gender parity in many aspects of life, most notably primary education. Although there are more women than ever working in many industries, gender disparity still exists in many regions and many rights are still denied to women. </p></div>
+			<div class="targetov"><p style="font-size:30px"><strong>Overview on Target 5.2</strong> - Around 35% of women around the world have been estimated to have been victims of physical or sexual abuse by either a partner or a non-partner. This number rises to 70% in some studies and some studies also show that victims of this abuse are more likely to become depressed, acquire HIV or other STIs, have issues with alcohol use and abuse, and become injured as a result of their abuse. Human trafficking is another major issue that affects mostly women. Almost 72% of human trafficking victims are women and 75% of all child trafficking victims are girls. For these reasons, Target 5.2 is an essential target and it is important that it is achieved thoroughly and discrimination against women at the national level is closely monitored and discouraged by the UN.</p></div>
+			<!--- Here are the images that go next to the overviews --->
+			<div class="imgov" id="nopadding"><img src="img/imgov5.png" style="width: 100%; height: 450px; object-fit: cover; padding:0px;margin:0px;"></div>
+			<div class="imgtar" id="nopad"><img src="img/violence52.jpg" height=300 style="width: 100%; height: 580px; object-fit: cover; padding:0px;margin:0px;"></div>
+			<!--- Here is the YouTube video --->
+			<div class="video"><iframe width=100% height="500px" src="https://www.youtube-nocookie.com/embed/VcP5xWJ4Uco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+			<!--- Here is where the Chart.JS graph goes (the canvas). Below the canvas is a button which is what is clicked to sort the data --->
+			<div class="graph"><canvas id="chart"></canvas><button id="shuffle" style="background-color: rgba(166,29,42); border: none; color: white;padding: 10px 30px;text-align: center;text-decoration: none;font-size: 15px;margin: 4px 2px;cursor: pointer;">Sort Data In Ascending Order</button></div>
+			<!--- Here is the embeded map --->
+			<div class="map"><iframe src="https://ourworldindata.org/grapher/women-violence-by-an-intimate-partner" style="width: 100%; height: 600px; border: 0px none;"></iframe></div>
+			<!--- Below are all the charities, their images, and their overviews --->
+			<div class="chartitl"><p style="font-size:35px">&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash; Charities &mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;</p></div>
+			<div class="charI"><a href="https://www.care.org/impact/stories/cares-work-end-gender-based-violence"><p style="font-size:25px">Cooperative for Assistance and Relief Everywhere (CARE)</p></a><a href="https://www.care.org/impact/stories/cares-work-end-gender-based-violence"><img src="img/careimage.jpg" height=200 style="padding:20px"></a><p style="font-size:20px">Ending poverty requires addressing the power inequalities between women and men, girls and boys that underpin gender-based violence. CARE is committed to supporting the empowerment of poor women and girls in their challenges to enjoy happy and healthy lives and to change the contexts in which they live, learn, work and raise families. This includes the organization’s dedication to working with women and men in all settings to confront gender-based violence, which affects at least one in three women worldwide. CARE’s holistic approach to gender-based violence combines prevention with comprehensive service delivery, and addresses root causes driving various forms of gender-based violence and gender discrimination.</p></div>
+			<div class="charII"><a href="http://endingviolencecanada.org/"><p style="font-size:25px">Ending Violence Association of Canada</p></a><a href="http://endingviolencecanada.org/"><img src="img/evac.png" height=200 style="padding:20px"></a><p style="font-size:20px">Ending Violence Association of Canada (EVA CAN) is a national non-profit organization whose main purpose is to educate and respond to gender based violence at the national level. EVA CAN has formed in response to the need to foster a national voice, to bring together all of the sectors involved in the array of anti-violence issues for national dialogue and action, for collaboration across provinces and territories to develop comprehensive and coordinated responses, for developing and sharing information and best practices, promoting safety of workers in the field, and creating a more effective gateways to services.</p></div>
+			<!--- Below are all the news articles and their overviews --->
+			<div class="newstitl"><p style="font-size:35px">&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash; News &mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;</p></div>
+			<div class="newsI"><a href="https://www.un.org/sustainabledevelopment/blog/2020/03/gender-equality-grows-as-key-aspect-of-sustainable-ocean-management/"><p style="font-size:25px">Gender equality grows as key aspect of sustainable ocean management</p></a><br><p style="font-size:20px">Intro: According to the Food and Agriculture Organization, women represent nearly half of the estimated 180 million people worldwide working in fisheries and aquaculture. Many of them in low-skilled, low-paid jobs without contracts or health, safety and labour rights. We look at three voluntary commitments to promote gender equality in the marine industry.</p></div>
+			<div class="newsII"><a href="https://news.un.org/en/story/2020/02/1058271"><p style="font-size:25px">Make this the century of women’s equality: UN chief</p></a><br><p style="font-size:20px">The 21st century must be the century of women’s equality, UN Secretary-General António Guterres said on Thursday, in a call to transform the world by ensuring equal participation for all.</p></div>
+			<div class="newsIII"><a href="https://www.un.org/sustainabledevelopment/blog/2019/03/new-stamps-on-gender-equality/"><p style="font-size:25px">Stamps on Gender Equality, Migration and Sexual Exploitation issued today</p></a><br><p style="font-size:20px">On 15 March 2019, the United Nations Postal Administration (UNPA) will issue three definitive stamps on the topics of “Stop Sexual Exploitation and Abuse” (US$0.85 stamp), “Gender Equality” (CHF1,50 stamp) and “Migration” (€1,80 stamp).</p></div>
+		</div>
+		<script>
+		//Below is the JavaScript code that allows for the Chart.JS graph to work.
+		//Here, the canvas with the id, chart is identified to hold the Chart.JS chart
+		const CHART = document.getElementById("chart");
+		//This controls how long the animations take (i.e. setup animation, sorting animation)
+		Chart.defaults.global.animation.duration = 3000;
+		// Here is where Chart.JS is setup
+		Chart.plugins.register({
+			beforeUpdate: function(chart) {
+				if (chart.options.sort) {
+					let dataArray = chart.data.datasets[0].data.slice();
+					let dataIndexes = dataArray.map((d, i) => i);
+					dataIndexes.sort((a, b) => {
+						return dataArray[a] - dataArray[b];
+					});
+
+					// sort data array as well
+					dataArray.sort((a, b) => a - b);
+
+					// At this point dataIndexes is sorted by value of the data, so we know how the indexes map to each other
+					let meta = chart.getDatasetMeta(0);
+					let newMeta = [];
+					let labels = chart.data.labels;
+					let newLabels = [];
+
+					meta.data.forEach((a, i) => {
+						newMeta[dataIndexes[i]] = a;
+						newLabels[dataIndexes[i]] = chart.data.labels[i];
+					});
+
+					meta.data = newMeta;
+					chart.data.datasets[0].data = dataArray;
+					chart.data.labels = newLabels;
+				}
+			}
+		});
+		//Here is where all the data and colours for all the bars are put. All the data was directly copied from a CSV from Our World in Data
+		let barChart = new Chart(CHART, {
+			type: 'horizontalBar',
+			data: {
+				labels: ["Austria","Bangladesh","Belgium","Bulgaria","Burkina Faso","Cameroon","Canada","Comoros","Cote d'Ivoire","Croatia","Czech Republic","Denmark","El Salvador","Equatorial Guinea","Euro area","Europe & Central Asia","European Union","Fiji","Finland","Gabon","Germany","Ghana","Greece","Haiti","Honduras","Hungary","Iceland","Ireland","Italy","Jamaica","Jordan","Kiribati","Kyrgyzstan","Latvia","Lithuania","Lower middle income","Luxembourg","Malawi","Mali","Malta","Mexico","Mozambique","Nepal","Netherlands","Nigeria","Nigeria","Norway","Peru","Peru","Philippines","Romania","Rwanda","Sierra Leone","Singapore","Slovenia","South Asia","South Asia (IDA & IBRD)","Spain","Sweden","Tajikistan","Tanzania","Timor","Tonga","Turkey","Uganda","United Kingdom","Vanuatu","Vietnam","Zimbabwe"],
+				datasets: [{
+					label: "Percentage",
+					backgroundColor: [
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)'
+					],
+
+					data: [3.00,50.70,6.00,6.00,9.60,32.60,1.30,4.80,22.90,3.00,4.00,4.00,7.70,43.60,2.53,5.43,3.23,24.00,5.00,31.20,3.00,20.00,6.00,14.80,10.90,6.00,1.80,3.00,2.00,7.70,14.10,36.10,17.10,5.00,4.00,23.11,3.00,21.20,26.60,4.00,6.60,27.70,14.30,2.00,15.20,10.90,6.00,14.90,12.10,7.00,6.00,44.30,28.60,0.90,2.00,26.80,26.80,2.00,2.20,15.20,36.80,31.50,19.00,11.00,34.60,5.00,44.00,9.00,27.20]
+				}]
+			},
+			//Here is where the graph can be customized and all the titles and tooltip info is put
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				scaleShowValues: true,
+				defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'Assistant'",
+				title: {
+					display: true,
+					text: 'Proportion of women subjected to physical and/or sexual violence in the last 12 months',
+					fontSize: 20,
+					fontColor: 'black',
+				},
+				legend: {
+					display: false,
+				},
+				scales: {
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Countries',
+							fontSize: 15,
+							fontColor: 'black',
+						},
+
+					}],
+					xAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Percentage of Women',
+							fontSize: 15,
+							fontColor: 'black',
+						},
+						ticks: {
+							autoSkip: false,
+							beginAtZero: true,
+							callback: function(value, index, values) {
+								return value + "%";
+							}
+						}
+					}],
+				}
+			}
+		});
+		//Below is the function that sorts the data when the button is clicked
+		document.getElementById('shuffle').addEventListener('click', function() {
+			barChart.options.sort = true;
+			barChart.update();
+			barChart.options.sort = false;
+		});
+		</script>
+		<!--- Below is all of the FireBase code --->
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="/__/firebase/7.12.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="/__/firebase/7.12.0/firebase-analytics.js"></script>
+
+		<!-- Initialize Firebase -->
+		<script src="/__/firebase/init.js"></script>
+	</body>
+</html>
+

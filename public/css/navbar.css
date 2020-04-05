@@ -1,0 +1,33 @@
+/*This makes sure that there is no margin between the navbar and the top of the page */ 
+body {
+	margin: 0;
+	font-size: 28px;
+	font-family: 'Assistant', sans-serif;
+}
+/* This styles the navbar as a whole. It says that the navbar will have no margin; a background colour of light grey; and if it is scaled too small, the overflow of the words will be hidden (as opposed to wrapped or something else)*/
+#navbar {
+	overflow: hidden;
+	margin: 0; 
+	background-color:#a9a9a9
+}
+/* This styles the individual buttons of the nav bar. It tells them to stay to the left, center the text, have a specific background colour, and more */
+#navbar a {
+	float: left;
+	display: block;
+	background-color: #a9a9a9;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	color:black;
+}
+/* This styles the navbar button that has the class "active". The page that the user is on has their button witht he class "active", and the background colour and text colour is changed. */
+#navbar a#active {
+	background-color: #595959;
+	color: #dddddd;
+}
+/* This styles the button that the user is hovering over. It makes the background a little but lighter; it is a pretty cool effect */
+#navbar a:hover {
+	background-color: #ddd;
+
+}

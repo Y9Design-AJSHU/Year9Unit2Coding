@@ -1,0 +1,36 @@
+.header {
+	padding: 60px;
+	text-align: center;
+	background: #101010;
+	color: white;
+	font-size: 30px;
+}
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'overview overview allsdgs allsdgs allsdgs allsdgs'
+		'video video video imgslide imgslide imgslide';
+	grid-gap: 9px;
+	background-color: #a9a9a9;
+	padding: 10px;
+}
+
+.grid-container > div {
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	padding: 20px 10px;
+	font-size: 30px;
+	margin:0px;
+}
+p{padding:0px;margin:0px;}
+
+.title { grid-area: title;}
+.allsdgs { grid-area: allsdgs; }
+.overview { grid-area: overview; }
+.video { grid-area: video;}
+.imgslide { grid-area: imgslide;}
+
+#footer{font-size:20px;padding:10px}
+
+.w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}.w3-auto{max-width:1140px}
+.w3-section,.w3-code{margin-top:16px!important;margin-bottom:16px!important}

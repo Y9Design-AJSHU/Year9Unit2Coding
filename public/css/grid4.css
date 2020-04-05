@@ -1,0 +1,67 @@
+/* This is the styling for the header */
+.header {
+	padding: 60px;
+	text-align: center;
+	background: rgba(166,29,42);
+	color: white;
+	font-size: 30px;
+}
+/* This creates the grid container. The "grid-template" areas property maps out the grid and declares what grid area goes where and how it takes up space within the grid. */
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'target target target logoI logoII logoII'
+		'target target target logoI logoII logoII'
+		'target target target logoI logoII logoII'
+		'overview overview overview imgov imgov imgov'
+		'imgtar imgtar imgtar targetov targetov targetov'
+		'video video video graph graph graph'
+		'map map map graph graph graph'
+		'chartitl chartitl chartitl chartitl chartitl chartitl'
+		'charI charI charI charII charII charII'
+		'newstitl newstitl newstitl newstitl newstitl newstitl'
+		'newsI newsI newsII newsII newsIII newsIII';
+		/* This helps maintain consistency when scaling, by keeping all grid columns approximately 1/6 of the page in width */
+	grid-template-columns: 16.1% 16.1% 16.1% 16.1% 16.1% 16.1%;
+	grid-gap: 9px;
+	background-color: #FFCCCB;
+	padding: 10px;
+}
+/* This styles what each area in the grid container will look like */
+.grid-container > div {
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	padding: 20px 10px;
+	font-size: 30px;
+	margin:0px;
+}
+/*This makes sure that paragraphs have no margins or padding (the grid areas already have margins and padding */
+p{padding:0px;margin:0px;}
+/*This assigns a class to each grid-area, so HTML elements can be put within the areas */
+.title { grid-area: title;}
+.logoI { grid-area: logoI; }
+.logoII { grid-area: logoII; }
+.subtitle { grid-area: subtitle; }
+.target { grid-area: target; }
+.overview { grid-area: overview; }
+.imgov { grid-area: imgov;}
+.imgtar { grid-area: imgtar; }
+.targetov { grid-area: targetov; }
+.video { grid-area: video; }
+.graph { grid-area: graph;}
+.map { grid-area: map; }
+.chartitl { grid-area: chartitl; }
+.charI { grid-area: charI; }
+.charII { grid-area: charII; }
+.newstitl { grid-area: newstitl; }
+.newsI { grid-area: newsI; }
+.newsII { grid-area: newsII; }
+.newsIII { grid-area: newsIII; }
+
+/*This keeps the size of the cavas, helping maintain consistency when scaling. */
+canvas{
+
+	width:100% !important;
+	height:1100px !important;
+
+}

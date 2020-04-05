@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--- Here are the links to all the css and js documents that are used to style and add interaction to the site. --->
+		<link rel="stylesheet" href="css/navbar.css">
+		<link rel="stylesheet" href="css/grid4.css">
+		<link rel="stylesheet" href="https://ourworldindata.org/assets/css/commons.css">
+		<script src="navbar.js"></script>
+		<!-- Here is where the font is imported --->
+		<link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="sdgs/sdg4.png" />
+		<!--- Here is the title of the page --->
+		<title>SDG #4</title>
+		<style>b{font-family:Assistant;}</style>
+	</head>
+		<!--- Here is the div container that contains the navigation bar --->
+		<div id="navbar">
+			<a href="index.html">Home</a>
+			<a id="active" href="javascript:void(0)">SDG #4</a>
+			<a href="sdg5.html">SDG #5</a>
+			<a href="connection.html">Connection Between SDG #4 and SDG #5</a>
+		</div>
+		<!--- Here is the div container that contains the header section --->
+		<div class="header">
+			<h1 style="font-size:70px;">Sustainable Development Goal 4</h1>
+			<p style="font-size:45px;">Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.</p>
+		</div>
+		<!-- Below, the div containing all elements within the grid is created-->
+		<div class="grid-container">
+			<!-- Below are all the grid areas-->
+			<!-- Here are the logos for the SDG and the target --->
+			<div class="logoI" id="nopad"><img src="img/tar4c.jpg" width=65%></div>
+			<div class="logoII" id="nopad"><img src="img/sdg4.jpeg" width=51%></div>
+			<!--- Below is a lot of the text that is used in the site (i.e. Overview, target, etc.) --->
+			<div class="target"><p style="font-size:30px"><em><strong>Target 4.c</em></strong> - By 2030, substantially increase the supply of qualified teachers, including through international cooperation for teacher training in developing countries, especially least developed countries and small island developing States</p></div>
+			<div class="overview"><p style="font-size:30px"><strong>Overview</strong> - Obtaining a quality education is the foundation to creating sustainable development. In addition to improving quality of life, access to inclusive education can help equip locals with the tools required to develop innovative solutions to the world’s greatest problems. Over 265 million children are currently out of school and 22% of them are of primary school age. Additionally, even the children who are attending schools are lacking basic skills in reading and math. In the past decade, major progress has been made towards increasing access to education at all levels and increasing enrollment rates in schools particularly for women and girls.</p></div>
+			<div class="targetov"><p style="font-size:30px"><strong>Overview about Target 4.c:</strong> Quality teaching is essential to achieve all of the goals because teachers are the ones who are providing the information to the students. In my Primary Research example regarding the South African man whose teacher taught him incorrect English, forcing him to learn from magazines, the teacher was the main weak-point in the education system. This target is especially urgent because the lack of well-trained teachers in certain areas (especially underdeveloped areas) causes many of the other problems such as low literacy and numeracy rate. The target aims to have enough teachers with enough training. It is important that both boxes are checked.</p></div>
+			<!--- Here are the images that go next to the overviews --->
+			<div class="imgov" id="nopadding"><img src="img/sdg4imgov.jpg" style="width: 100%; height: 530px; object-fit: cover; padding:0px;margin:0px;"></div>
+			<div class="imgtar" id="nopad"><img src="img/imgtar.png" style="width: 100%; height: 530px; object-fit: cover; padding:0px;margin:0px;"></div>
+			<!--- Here is the YouTube video --->
+			<div class="video"><iframe width=100% height="450px" src="https://www.youtube-nocookie.com/embed/v3r347jq78w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+			<!--- Here is where the Chart.JS graph goes (the canvas). Below the canvas is a button which is what is clicked to sort the data --->
+			<div class="graph"><canvas id="chart"></canvas><button id="shuffle" style="background-color: rgba(166,29,42); border: none; color: white;padding: 10px 30px;text-align: center;text-decoration: none;font-size: 15px;margin: 4px 2px;cursor: pointer;">Sort Data In Ascending Order</button></canvas></div>
+			<!--- Here is the embeded map --->
+			<div class="map"><iframe src="https://ourworldindata.org/grapher/pupil-teacher-ratio-for-primary-education-by-country?year=2015" style="width: 100%; height: 600px; border: 0px none;"></iframe></div>
+			<!--- Below are all the charities, their images, and their overviews --->
+			<div class="chartitl"><p style="font-size:35px">&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash; Charities &mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;</p></div>
+			<div class="charI"><a href="https://www.lrtt.org/"><p style="font-size:25px">Limited Resource Teacher Training</p></a><a href="https://www.lrtt.org/"><img src="img/lrtt.jpg" height=200 style="padding:20px"></a><p style="font-size:20px">Every child has the right to quality education and teaching is the single biggest factor influencing learning in schools. LRTT runs teacher development programmes in low-resource contexts that equip and empower teachers to use evidence-based approaches in their classrooms every day. Since 2012, more than 2000 LRTT Fellows from around the world have joined LRTT, leading cross-border teacher development for 5000 teachers across 11 countries. Whether you’re new to the profession, or an old hand, all teachers are welcome. Having teams of Fellows with diverse skills and experience is what makes the Fellowship experience such a valuable one for all teachers.</p></div>
+			<div class="charII"><a href="https://www.africateacherfoundation.org/"><p style="font-size:25px">Africa Teacher Foundation</p></a><a href="https://www.africateacherfoundation.org/"><img src="img/atf.jpg" height=200 style="padding:20px"></a><p style="font-size:20px">The Africa Teacher Foundation was established in 2007 to help African teachers use best educational principles and practices to improve their curricular and instructional standards. These improvements will, in turn, enhance the quality of life for children residing in the poorest slums in East Africa. Participants from slum, rural, and national schools in Kenya, Tanzania, and Uganda receive ten days of professional development and support to learn varied approaches to meet the needs of all learners across the basic skill areas of literacy, mathematics, and writing.</p></div>
+			<!--- Below are all the news articles and their overviews --->
+			<div class="newstitl"><p style="font-size:35px">&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash; News &mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;-&mdash;</p></div>
+			<div class="newsI"><a href="https://www.un.org/sustainabledevelopment/blog/2019/02/amelie-jezabel-mariage-interview/"><p style="font-size:25px">Amélie Jézabel Mariage, United Nations Young Leader for the SDGs and Co-founder of Aprendices Visuales</p></a><br><p style="font-size:20px">United Nations Young Leader for the SDGs Amélie Jézabel Mariage discusses her inspiration in advocating for children's rights to access inclusive education, adding that “innovation in education is a proven path to inclusion and a bridge to opportunity.”</p></div>
+			<div class="newsII"><a href="https://www.un.org/sustainabledevelopment/blog/2019/02/madelle-kangha-interview/"><p style="font-size:25px">Madelle Kangha, United Nations Young Leader for the SDGs and Founder of JumpStart Academy Africa</p></a><br><p style="font-size:20px">I believe that educating and empowering young people everywhere, to become effective and productive members of society, is essential for sustainable growth and development.</p></div>
+			<div class="newsIII"><a href="https://www.un.org/sustainabledevelopment/blog/2018/12/sdg-advocate-her-highness-sheikha-moza-bint-nasser-met-with-antonio-guterres-and-henrietta-fore-at-hamad-bin-khalifa-university-to-discuss-progress-on-sdg-4/"><p style="font-size:25px">SDG Advocate Her Highness Sheikha Moza bint Nasser, met with Antonio Guterres and Henrietta Fore at Hamad bin Khalifa University to discuss progress on SDG 4</p></a><br><p style="font-size:20px">SDG Advocate Her Highness Sheikha Moza bint Nasser, Founder and Chairperson of Education Above All Foundation met with the UN Secretary-General Antonio Guterres and UNICEF Executive Director, Henrietta Fore and discussed Sustainable development Goals progress and ongoing education efforts. Her Highness then attended the insightful lecture by the UN Secretary General.</p></div>
+		</div>
+		<script>
+		//Below is the JavaScript code that allows for the Chart.JS graph to work.
+		//Here, the canvas with the id, chart is identified to hold the Chart.JS chart
+		const CHART = document.getElementById("chart");
+		//This controls how long the animations take (i.e. setup animation, sorting animation)
+		Chart.defaults.global.animation.duration = 3000;
+		// Here is where Chart.JS is setup
+		Chart.plugins.register({
+			beforeUpdate: function(chart) {
+				if (chart.options.sort) {
+					let dataArray = chart.data.datasets[0].data.slice();
+					let dataIndexes = dataArray.map((d, i) => i);
+					dataIndexes.sort((a, b) => {
+						return dataArray[a] - dataArray[b];
+					});
+
+					// sort data array as well
+					dataArray.sort((a, b) => a - b);
+
+					// At this point dataIndexes is sorted by value of the data, so we know how the indexes map to each other
+					let meta = chart.getDatasetMeta(0);
+					let newMeta = [];
+					let labels = chart.data.labels;
+					let newLabels = [];
+
+					meta.data.forEach((a, i) => {
+						newMeta[dataIndexes[i]] = a;
+						newLabels[dataIndexes[i]] = chart.data.labels[i];
+					});
+
+					meta.data = newMeta;
+					chart.data.datasets[0].data = dataArray;
+					chart.data.labels = newLabels;
+				}
+			}
+		});
+		//Here is where all the data and colours for all the bars are put. All the data was directly copied from a CSV from Our World in Data
+		let barChart = new Chart(CHART, {
+			type: 'horizontalBar',
+			data: {
+				labels: ["Albania","Andorra","Bahrain","Barbados","Belarus","Belize","Benin","Bermuda","Botswana","Brunei","Burkina Faso","Burundi","Cambodia","Cameroon","Cape Verde","Cayman Islands","Colombia","Comoros","Cote d'Ivoire","Cuba","Democratic Republic of Congo","Djibouti","Dominica","Dominican Republic","Egypt","Eritrea","Ethiopia","Gambia","Ghana","Grenada","Guinea","Hong Kong","Iran","Jamaica","Kazakhstan","Kiribati","Kuwait","Kyrgyzstan","Laos","Lesotho","Macao","Madagascar","Malaysia","Maldives","Mauritius","Mongolia","Morocco","Mozambique","Nauru","Nepal","Niger","Palestine","Panama","Paraguay","Peru","Philippines","Puerto Rico","Qatar","Saint Kitts and Nevis","Saint Vincent and the Grenadines","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Sint Maarten (Dutch part)","Solomon Islands","Sri Lanka","Suriname","Swaziland","Tajikistan","Tanzania","Thailand","Togo","Tonga","Tunisia","Tunisia","Turks and Caicos Islands","Ukraine","United Arab Emirates","Vanuatu","Vietnam","Zambia","Zimbabwe"],
+				datasets: [{
+					label: "Percentage",
+					backgroundColor: [
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)',
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)'
+					],
+
+					data: [72.47,100.00,96.27,100.00,99.44,28.82,100.00,100.00,98.64,47.83,85.59,91.44,100.00,57.51,91.23,88.12,94.25,75.06,88.27,81.39,100.00,100.00,64.81,81.27,85.16,99.68,54.36,84.11,54.69,48.67,70.70,100.00,100.00,95.66,100.00,96.91,77.37,73.69,82.63,75.79,100.00,99.31,100.00,86.06,100.00,97.93,100.00,89.96,50.00,93.85,100.00,46.79,100.00,86.62,84.42,99.44,100.00,100.00,100.00,16.24,100.00,100.00,100.00,76.35,51.93,68.91,68.64,92.74,94.14,65.78,94.89,98.99,100.00,66.30,99.55,100.00,100.00,90.41,84.76,100.00,70.09,99.71,65.90,74.30]
+				}]
+			},
+			//Here is where the graph can be customized and all the titles and tooltip info is put
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				scaleShowValues: true,
+				defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'Assistant'",
+				title: {
+					display: true,
+					text: 'Percentage of teachers in primary education who are qualified',
+					fontSize: 20,
+					fontColor: 'black',
+				},
+				legend: {
+					display: false,
+				},
+				scales: {
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Countries',
+							fontSize: 15,
+							fontColor: 'black',
+						},
+
+					}],
+					xAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Percentage of teachers',
+							fontSize: 15,
+							fontColor: 'black',
+						},
+						ticks: {
+							autoSkip: false,
+							beginAtZero: true,
+							callback: function(value, index, values) {
+								return value + "%";
+							}
+						}
+					}],
+				}
+			}
+		});
+		//Below is the function that sorts the data when the button is clicked
+		document.getElementById('shuffle').addEventListener('click', function() {
+			barChart.options.sort = true;
+			barChart.update();
+			barChart.options.sort = false;
+		});
+		</script>
+		<!--- Below is all of the FireBase code --->
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="/__/firebase/7.12.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="/__/firebase/7.12.0/firebase-analytics.js"></script>
+
+		<!-- Initialize Firebase -->
+		<script src="/__/firebase/init.js"></script>
+	</body>
+</html>
+
